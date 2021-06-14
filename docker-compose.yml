@@ -1,0 +1,12 @@
+version: '2'
+services:
+  server:
+    build: server
+    volumes:
+     - .:\code
+  client:
+    build: client
+    depends_on:
+      - "server"
+    volumes:
+     - .:\code
